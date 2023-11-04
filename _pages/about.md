@@ -8,10 +8,10 @@ redirect_from:
   - /about.html
 ---
 
-  Welcome! I am Phan Trọng Nhân (Phan Trong Nhan), A third-year student majoring in Computer Science at the University of Information Technology, VNU-HCM ([vi](https://uit.edu.vn/), [en](https://en.uit.edu.vn/)).
-
+&ensp;&ensp;Welcome! I am Phan Trọng Nhân (Phan Trong Nhan), A third-year student majoring in Computer Science at the University of Information Technology, VNU-HCM ([vi](https://uit.edu.vn/), [en](https://en.uit.edu.vn/)).
+  
 ## News
-11/4/2023 : I created github page and chose [this](https://github.com/academicpages/academicpages.github.io) template because it look cool.
+11/4/2023 : I created github page and chose [this template](https://github.com/academicpages/academicpages.github.io) because it look cool.
   
 ## Education
 **University of Information Technology, Vietnam National University - Ho Chi Minh City, Vietnam**
