@@ -3,3 +3,6 @@ main:
   - title: "CV"
     url: /files/CV.pdf
     
+  - title: "Blog Posts"
+    url: /year-archive/
+    
