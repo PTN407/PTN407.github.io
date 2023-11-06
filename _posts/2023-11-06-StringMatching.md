@@ -27,6 +27,11 @@ Here, my solution focus on the problems with update tasks (Can we do updates wit
 My claim is kind of simple:  
 > **Claim:**  Define U(R) as a set contain all K-substrings (substrings of length K) of a string R. If U(P) is subset of U(L), P is a substring of L. (K is a hyperparameter; In Super Cup, I choose K = 10).
 
+Now, you may say, this would never work. Of course it won't work in worst cases, like when all character of P are the same. But will it work if all character of P and L are randomly generated?
+
+## Probabilities
+
+I'm bad at math. :<
 
 ## Expansion
 
