@@ -17,7 +17,7 @@ Ok, here we begin.
 
 ## Problem  
   
-First of all, let I redefine the string matching problem:
+First of all, let me redefine the string matching problem:
 > **String Matching Problem:**  Given two strings L and P. determine if P is a substring (a contiguous sequence of characters) of L.
 
 Many algorithm like Hash, KMP, Z already solved this problem with the best possible time complexity (O(n + m), with n and m is the length of L and P, respectively).  
@@ -39,4 +39,4 @@ The claim above can be apply to various problem.
 My solution to the problem: Define cnt(s,R) is the number of times a string s appear in a string R as a K-substring. The solution to the problem is the minimum cnt(s1, L) / cnt(s1, P) among all K-substring s1 of P.
 
 ### Insert/Delete Query
-To insert or delete a character at a arbitrary position, just update K-substrings contain the character of that position. Updates can be done in the string using a cartesian tree.
+To insert or delete a substring at a arbitrary position, just update K-substrings contain the character of those position. Insert/Delete in string can be done using a cartesian tree.
