@@ -1,4 +1,4 @@
-![image](https://github.com/PTN407/PTN407.github.io/assets/92132592/f49efdf3-c604-4a0b-b176-51e7c0cb69d7)---
+---
 title: 'A dumb (but worked) solution to string matching problem'
 date: 2023-11-06
 permalink: /posts/DumbSM
