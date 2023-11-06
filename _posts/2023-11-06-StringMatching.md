@@ -1,4 +1,4 @@
----
+![image](https://github.com/PTN407/PTN407.github.io/assets/92132592/f49efdf3-c604-4a0b-b176-51e7c0cb69d7)---
 title: 'A dumb (but worked) solution to string matching problem'
 date: 2023-11-06
 permalink: /posts/DumbSM
@@ -40,3 +40,7 @@ My solution to the problem: Define cnt(s,R) is the number of times a string s ap
 
 ### Insert/Delete Query
 To insert or delete a substring at a arbitrary position, just update K-substrings contain the character of those position. Insert/Delete in string can be done using a cartesian tree.
+
+To demonstrate how insert/delete work, I created this ugly-looking pic using MS Paint ==" :  
+![image](https://github.com/PTN407/PTN407.github.io/assets/92132592/20d95251-e8be-44ac-842b-04a5f11dec40)
+
