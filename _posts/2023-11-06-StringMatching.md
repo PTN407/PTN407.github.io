@@ -35,17 +35,26 @@ I'm bad at math. :<
 
 ## Expansion
 
-The claim above can be apply to various problem.
+### Generic query tasks
 
+&nbsp;
+Note that, two functions U and cnt described above are independent for each string. Suppose You have a fixed string L, in each query, you are given a string P (or updating a pre-defined P), and need to find F(L, P) (counting substrings, checking substring, insert/delete, etc...). F(L, P) can be found in O((len(P) * K * log(len(P) * K)) * (log(len(L)) * K)) as we only need to work on P (in most cases, we need to find all K-substrings in P and put them into a map, hence the complexity len(P) * K * log(len(P) * K)), and any interaction with L is through U or cnt, which take log(len(L)) * K each time (or log(len(L)) + K if we use hash).
+  
 ### Substring counting 
-
+  
 > **Substring Counting Problem:**  Given two strings L and P. determine the number of times P appear in L as a substring.
-
+  
+&nbsp;
 My solution to the problem: Define cnt(s,R) is the number of times a string s appear in a string R as a K-substring. The solution to the problem is the minimum cnt(s1, L) / cnt(s1, P) among all K-substring s1 of P.
 
 ### Insert/Delete Query
-To insert or delete a substring at a arbitrary position, just update K-substrings contain the character of those position. Insert/Delete in string can be done using a cartesian tree.
 
-To demonstrate how insert/delete work, I created this ugly-looking pic using MS Paint ==" :  
+&nbsp;
+To insert or delete a substring at a arbitrary position, just update K-substrings contain the character of those position. Insert/Delete in string can be done using a cartesian tree.
+  
+&nbsp;
+To demonstrate how insert/delete work, I created this ugly-looking pic using MS Paint:  
 ![image](https://github.com/PTN407/PTN407.github.io/assets/92132592/20d95251-e8be-44ac-842b-04a5f11dec40)
 
+## Longest common substring
+This can turn into "Find longest consecutive K-substring of P appear in L". Note that this only work if longest common substring have length of at least K, so if there are no consecutive K-substring of P appear in L, brute force all substring in P whose length < K.  
