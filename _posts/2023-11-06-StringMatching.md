@@ -7,18 +7,12 @@ tags:
   - Competitive Programming
 ---
 
-When I attended Super Cup last year, I met [an interesting problem](https://oj.vnoi.info/problem/olp_sc22_bstr). I came up with a heuristic way to solve string matching problem and got AC. But until now, I still feel annoyed that I can't study about it more. I opened this blog post so that I can try to find something interesting.
-
-&nbsp;  
-You can repost, use, modify,... (do whatever you want to) this post, but if you do, please, write my name or the link to this blog as the source. This blog post is not final, I will update it when I can think of something worth putting.
-  
-&nbsp;  
-Ok, here we begin.  
+When I attended Super Cup last year, I met [an interesting problem](https://oj.vnoi.info/problem/olp_sc22_bstr). I came up with a heuristic way to solve string matching problem.
 
 ## Problem  
   
 First of all, let me redefine the string matching problem:
-> **String Matching Problem:**  Given two strings L and P. determine if P is a substring (a contiguous sequence of characters) of L.
+> **String Matching Problem:**  Given two strings L and P. determine if P is a substring of L (or, determine if P appear in L as a contiguous sequence of characters).
 
 &nbsp;  
 Many algorithm like Hash, KMP, Z already solved this problem with the best possible time complexity (O(n + m), with n and m is the length of L and P, respectively).  
@@ -29,11 +23,7 @@ My claim is kind of simple:
 > **Claim:**  Define U(R) as a set contain all K-substrings (substrings of length K) of a string R. If U(P) is subset of U(L), P is a substring of L. (K is a hyperparameter; In Super Cup, I choose K = 10).
   
 &nbsp;  
-Now, you may say, this would never work. Of course it won't work in worst cases, like when all character of P are the same. But will it work if all character of P and L are randomly generated?
-
-## Probabilities
-
-I'm bad at math. :<
+Now, you might say, this would never work. Of course it won't work in worst cases, like when all character of P are the same. But will it work if all character of P and L are randomly generated?
 
 ## Expansion
 
@@ -52,7 +42,7 @@ My solution to the problem: Define cnt(s,R) is the number of times a string s ap
 ### Insert/Delete Query
 
 &nbsp;
-To insert or delete a substring at a arbitrary position, just update K-substrings contain the character of those position. Insert/Delete in string can be done using a cartesian tree.
+To insert or delete a substring at an arbitrary position, just update K-substrings containing the characters of that position. Insert/Delete in string can be done using a cartesian tree.
   
 &nbsp;
 To demonstrate how insert/delete work, I created this ugly-looking pic using MS Paint:  
@@ -61,4 +51,4 @@ To demonstrate how insert/delete work, I created this ugly-looking pic using MS 
 ### Longest common substring
 
 &nbsp;
-This can turn into "Find longest consecutive K-substring of P appear in L". Note that this only work if longest common substring have length of at least K, so if there are no consecutive K-substring of P appear in L, brute force all substring in P whose length < K.  
+This can turn into "Find longest consecutive K-substring of P appear in L". Note that this only works if the longest common substring has a length of at least K, so if there are no consecutive K-substrings of P appear in L, brute force all substring in P whose length < K.  
